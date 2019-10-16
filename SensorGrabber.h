@@ -47,14 +47,14 @@ public:
     loopRunSpeed = millisInput;
   }
 
-  void grabData(float input, uint8_t whichArrayPossition){
+  void grabData(float input, uint8_t whichArrayPosition){
     if(activeSetting == SEND_WITH_EACH_SAMPLE_INTERVAL_MILLIS_WITH_10_SAMPLE_AVERAGE
     || activeSetting == SEND_WITH_EACH_SAMPLE_INTERVAL_MILLIS_WITH_100_SAMPLE_AVERAGE){
       howManyTimesWeStoredTheValue++;
-      storedValue[whichArrayPossition - 1] += input;
+      storedValue[whichArrayPosition - 1] += input;
     }
     else{
-    storedValue[whichArrayPossition - 1] = input;
+    storedValue[whichArrayPosition - 1] = input;
     }
   }
 
